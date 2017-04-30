@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 11, Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container" id="#principal">
+        <nav id="Nav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container" id="letra">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only"></span>Menu<i class="fa fa-bars"></i>
+                    </button>
+                    <img src="public/img/uno.png" alt="logo" id="logo">
+                    <a id="DA" class="navbar-brand" href="index.html"><b>Dance Academy</b></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a id="a-uno" href="general.html"><b>General information</b></a>
+                        </li>
+                        <li>
+                            <a id="a-uno" href="events.html"><b>Events</b></a>
+                        </li>
+                        <li >
+                            <a id="a-uno" href="contact.html"><b>Contact</b></a>
+                        </li>
+                        <li>
+                            <textarea id="txtArea" placeholder="Buscar" id="busca" cols="15" rows="1"></textarea>
+                            <button id="busca" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+
+        <header>
+            <div class="container-fluid" id="inicio">
+                <div class="row">
+                    <div class="col-lg-12" id="inicio-2">
+                        <img class="img" src="public/img/uno1.png" alt="">
+                        <div class="text">
+                            <h1 class="name" style="font-size: 400%;">INTERNATIONAL COMPANY OF DANCE</h1>
+                            <hr class="star-primary">
+                            <hr class="star-primary" >
+                            <span class="info">Ballet - Hip-Hop Dance - Folklore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+<div class="container" id="gal">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <section ng-init="panel.tab" ng-controller="PanelController as panel">
+                    <ul class="nav nav-pills">
+                        <li ng-class="{ active: panel.isSelected(1)}"><a href="#" ng-click="panel.selectTab(1)">Galeria</a></li>
+                        <li ng-class="{ active: panel.isSelected(2)}"><a href="#" ng-click="panel.selectTab(2)">Profesores y Horarios</a></li>
+                    </ul>
+                    <div class="panel" ng-show = "panel.isSelected(1)">
+                        <div class="row">
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery1" class="gallery-link">
+                                    <img src="public/img/baile1.png" class="img" alt="Baile1" id="i-ba">
+                                </a>
+                            </div>
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery2" class="gallery-link">
+                                    <img src="public/img/baile2.png" class="img-responsive" alt="Baile2" id="i-ba">
+                                </a>
+                            </div>
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery3" class="gallery-link">
+                                    <img src="public/img/baile3.png" class="img-responsive" alt="Baile3" id="i-ba">
+                                </a>
+                            </div>
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery4" class="gallery-link">
+                                    <img src="public/img/baile4.png" class="img-responsive" alt="Baile4" id="i-ba">
+                                </a>
+                            </div>
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery5" class="gallery-link">
+                                    <img src="public/img/baile5.png" class="img-responsive" alt="Baile5" id="i-ba">
+                                </a>
+                            </div>
+                            <div class="col-sm-4 gallery-gal">
+                                <a href="#Gallery6" class="gallery-link">
+                                    <img src="public/img/baile6.png" class="img-responsive" alt="Baile6" id="i-ba">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" ng-show = "panel.isSelected(2)">
+                        <table class="table table-bordered table-hover"> <!-- bordered - striped - hover-->
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Horario</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="">
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Lunes, 3:00 - 5:00 PM</td>
+                                </tr>
+                                <tr class="success">
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                    <td>Martes, 3:00 - 5:00 PM</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                    <td>Miercoles, 3:00 - 5:00 PM</td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>David</td>
+                                    <td>Rodriguez</td>
+                                    <td>david@example.com</td>
+                                    <td>Jueves, 3:00 - 5:00 PM</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>Alberto</td>
+                                    <td>Delgado</td>
+                                    <td>alberto@example.com</td>
+                                    <td>Viernes, 3:00 - 5:00 PM</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Natasha</td>
+                                    <td>Romanov</td>
+                                    <td>natasha@example.com</td>
+                                    <td>Sabado, 3:00 - 5:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </li>
+        </ul>
+
+    </div>
+
+<footer  class="text-center" >
+            <div class="footer-above">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3><b>Location</b></h3>
+                            <p><b>333333 Universidad Autonoma de Chihuahua
+                            <br>Chihuahua, Chih, CP 31111</b></p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3><b>Visit us</b></h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <button class="btn btn-primary"> 
+                                        <a href="www.facebook.com"><img src="public/img/fb.png" alt=""></a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-primary">
+                                        <a href="www.twitter.com"><img src="public/img/tw.png" alt=""></a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3><b>About</b></h3>
+                            <p><b>Dance academy is an institution dedicated to preparing professional dancers</b><a href="http://www.shiamak.com/the-dance-academy.html" style="color: white;"><b><big><big> Dance Academy</big></big></b></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <b>Website created by Karely Olivas</b> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
